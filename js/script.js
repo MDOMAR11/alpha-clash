@@ -1,6 +1,7 @@
 function play(){
   hideElementById('home-section');
   showElementById('play-ground');
+  hideElementById('score-section')
   setTextElementValueById('current-life', 5);
   setTextElementValueById('current-score', 0);
   continueGame();
@@ -47,10 +48,13 @@ function continueGame(){
 function gameOver (){
   hideElementById('play-ground');
   showElementById('score-section');
-  const currentAlphabet = document.getElementById('current-letter');
-  removeBackgroundColor(currentAlphabet);
+
   const finalValue = getTextElementValueById('current-score');
   setTextElementValueById('end-score', finalValue);
+
+  // cleaar background color 
+  const currentAlphabet = document.getElementById('current-letter');
+  removeBackgroundColor(currentAlphabet);
 
   
   
