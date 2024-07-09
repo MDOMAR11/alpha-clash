@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game</title>
+
+    <!--  tailwind css link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- custom css -->
+    <link rel="stylesheet" href="styles/styles.css" type="text/css">
+</head>
+<body>
+    <main class=" min-h-screen bg-[#010313] bg-[url('images/background.png')] bg-no-repeat bg-center ">
+        <!-- home section -->
+        <section id="home-section" class="flex flex-col justify-center items-center min-h-screen  ">
+           
+            <h1 class="play-heading text-8xl text-white text-center tracking-widest mt-6">ALPHABET CLASH</h1>
+            <p class="text-white text-center text-xl">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+           </div> 
+           <button onclick="play()" id="play-btn" class="bg-white p-2 text-2xl rounded-lg font-semibold my-3">play now</button>
+          
+        </section>
+        <!-- playground section -->
+        <section id="play-ground" class="play-ground hidden">
+            <div class="flex flex-col justify-center items-center h-screen ">
+                 <!-- playground screen -->
+                 <div class="artboard artboard-horizontal phone-6 border-[20px] border-[#010313CC] bg-[#FFFFFFCC] w-[1024px] h-[300px] flex justify-center items-center rounded-xl">
+                        <span id="current-letter" class="text-[80px] font-bold uppercase">Y</span>
+                 </div>
+                 <!-- playground keyboard -->
+            
+            
+                <!-- kyboard START -->
+                <div class="my-2">
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd id="q" class="kbd bg-black text-white px-3 py-1 rounded-md">q</kbd>
+                        <kbd id="w" class="kbd bg-black text-white px-3 py-1 rounded-md">w</kbd>
+                        <kbd id="e" class="kbd bg-black text-white px-3 py-1 rounded-md">e</kbd>
+                        <kbd id="r" class="kbd bg-black text-white px-3 py-1 rounded-md">r</kbd>
+                        <kbd id="t" class="kbd bg-black text-white px-3 py-1 rounded-md">t</kbd>
+                        <kbd id="y" class="kbd bg-black text-white px-3 py-1 rounded-md">y</kbd>
+                        <kbd id="u" class="kbd bg-black text-white px-3 py-1 rounded-md">u</kbd>
+                        <kbd id="i" class="kbd bg-black text-white px-3 py-1 rounded-md">i</kbd>
+                        <kbd id="o" class="kbd bg-black text-white px-3 py-1 rounded-md">o</kbd>
+                        <kbd id="p" class="kbd bg-black text-white px-3 py-1 rounded-md">p</kbd>
+                      </div> 
+                      <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd id="a" class="kbd bg-black text-white px-3 py-1 rounded-md">a</kbd>
+                        <kbd id="s" class="kbd bg-black text-white px-3 py-1 rounded-md">s</kbd>
+                        <kbd id="d" class="kbd bg-black text-white px-3 py-1 rounded-md">d</kbd>
+                        <kbd id="f" class="kbd bg-black text-white px-3 py-1 rounded-md">f</kbd>
+                        <kbd id="g" class="kbd bg-black text-white px-3 py-1 rounded-md">g</kbd>
+                        <kbd id="h" class="kbd bg-black text-white px-3 py-1 rounded-md">h</kbd>
+                        <kbd id="j" class="kbd bg-black text-white px-3 py-1 rounded-md">j</kbd>
+                        <kbd id="k" class="kbd bg-black text-white px-3 py-1 rounded-md">k</kbd>
+                        <kbd id="l" class="kbd bg-black text-white px-3 py-1 rounded-md">l</kbd>
+                      </div> 
+                      <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd id="z" class="kbd bg-black text-white px-3 py-1 rounded-md">z</kbd>
+                        <kbd id="x" class="kbd bg-black text-white px-3 py-1 rounded-md">x</kbd>
+                        <kbd id="c" class="kbd bg-black text-white px-3 py-1 rounded-md">c</kbd>
+                        <kbd id="v" class="kbd bg-black text-white px-3 py-1 rounded-md">v</kbd>
+                        <kbd id="b" class="kbd bg-black text-white px-3 py-1 rounded-md">b</kbd>
+                        <kbd id="n" class="kbd bg-black text-white px-3 py-1 rounded-md">n</kbd>
+                        <kbd id="m" class="kbd bg-black text-white px-3 py-1 rounded-md">m</kbd>
+                        <kbd id="/" class="kbd bg-black text-white px-3 py-1 rounded-md">/</kbd>
+                      </div>
+                </div>
+                <div class="flex  justify-between w-[900px]">
+                    <div class="spark flex  text-white text-lg items-center">
+                        <span class="text-2xl">Life</span>
+                        <img src="images/Group 23.png" alt="" width="30px" height="20px"> <span id="current-life" class="text-2xl">5</span>
+                       
+                    </div>
+                    <div class="spark flex  text-white text-lg items-center">
+                        <span  class="text-2xl">Score</span>
+                        <img src="images/monetization_on.png" alt="" width="30px" height="20px"> <span id="current-score" class="text-2xl"> 0 </span>
+       
+                       
+                    </div>
+                    
+                  </div>
+              
+               <!-- keyboard END -->
+                  <!-- button section --> 
+
+           </div>
+           
+
+
+            
+        </section>
+
+        <!-- score section -->
+        <section class="flex justify-center items-center h-screen hidden" id="score-section">
+          <div class="w-[300px] h-[200px] bg-[#ffffff33] rounded-2xl flex flex-col justify-center items-center">
+                <span class="text-3xl text-white">
+                  score:
+                </span> <span id=" end-score " class="text-white text-4xl">14</span>
+                
+  
+                <button onclick="play()" class="bg-[white] text-black rounded-lg px-3 py-2 font-bold">play Now </button><br>
+                <span class="text-white ">practice will make you pro</span>
+          </div>
+        </section>
+    </main>
+    <script src="js/utility.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
